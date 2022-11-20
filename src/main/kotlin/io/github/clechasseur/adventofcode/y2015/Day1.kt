@@ -3,7 +3,7 @@ package io.github.clechasseur.adventofcode.y2015
 import io.github.clechasseur.adventofcode.y2015.data.Day1Data
 
 object Day1 {
-    private val input = Day1Data.input
+    private const val input = Day1Data.input
 
     fun part1(): Int = input.mapToFloorMoves().sum()
 

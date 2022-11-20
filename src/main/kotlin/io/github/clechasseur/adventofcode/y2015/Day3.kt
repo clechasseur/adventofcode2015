@@ -5,7 +5,7 @@ import io.github.clechasseur.adventofcode.util.Pt
 import io.github.clechasseur.adventofcode.y2015.data.Day3Data
 
 object Day3 {
-    private val input = Day3Data.input
+    private const val input = Day3Data.input
 
     fun part1(): Int = input.map { it.toDirection() }.fold(Pt.ZERO to setOf(Pt.ZERO)) { (pos, s), d ->
         val newPos = pos + d.displacement
