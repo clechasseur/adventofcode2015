@@ -228,7 +228,7 @@ class AdventOfCode2015 {
         }
 
         @Test
-        @Ignore("Blows up")
+        @Ignore("It blows up")
         fun `day 19, part 2`() {
             assertEquals(0, Day19.part2())
         }
