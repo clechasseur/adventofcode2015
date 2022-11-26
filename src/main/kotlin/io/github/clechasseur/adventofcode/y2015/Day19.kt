@@ -12,7 +12,7 @@ object Day19 {
 
     fun part2(): Int = transforms.toTransformMap().reverse().moleculeSequence(molecule).takeWhile {
         !it.contains("e")
-    }.count() + 1
+    }.count()
 
     private fun String.toTransformMap(): Map<Regex, List<String>> = lines().map { line ->
         val match = transformRegex.matchEntire(line) ?: error("Wrong transform: $line")
@@ -34,7 +34,7 @@ object Day19 {
         }
     }
 
-    private fun Map<Regex, List<String>>.moleculeSequence(start: String): Sequence<List<String>> = generateSequence(listOf(start)) { l ->
-        l.asSequence().flatMap { allTransforms(it) }.distinct().toList()
+    private fun Map<Regex, List<String>>.moleculeSequence(start: String): Sequence<Sequence<String>> = generateSequence(sequenceOf(start)) { s ->
+        s.flatMap { allTransforms(it) }.distinct()
     }
 }
