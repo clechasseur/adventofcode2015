@@ -238,5 +238,11 @@ class AdventOfCode2015 {
         fun `day 20, part 1`() {
             assertEquals(831_600, Day20.part1())
         }
+
+        @Test
+        @Ignore("Takes a while depending on the starting point")
+        fun `day 20, part 2`() {
+            assertEquals(884_520, Day20.part2())
+        }
     }
 }
