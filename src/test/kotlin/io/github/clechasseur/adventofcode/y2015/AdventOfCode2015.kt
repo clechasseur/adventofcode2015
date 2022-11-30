@@ -284,9 +284,8 @@ class AdventOfCode2015 {
 
     class Day24Puzzles {
         @Test
-        @Ignore("Never finishes")
         fun `day 24, part 1`() {
-            assertEquals(0, Day24.part1())
+            assertEquals(10723906903L, Day24.part1())
         }
     }
 }
