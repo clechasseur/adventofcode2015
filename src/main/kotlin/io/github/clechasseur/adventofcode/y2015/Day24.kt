@@ -5,9 +5,13 @@ import io.github.clechasseur.adventofcode.y2015.data.Day24Data
 object Day24 {
     private val input = Day24Data.input
 
-    fun part1(): Long = (2..input.size).asSequence().flatMap { size ->
+    fun part1(): Long = minQuantumEntanglement(input.sum() / 3L)
+
+    fun part2(): Long = minQuantumEntanglement(input.sum() / 4L)
+
+    private fun minQuantumEntanglement(neededWeight: Long): Long = (2..input.size).asSequence().flatMap { size ->
         subPermutations(size).filter {
-            it.weight == input.sum() / 3L
+            it.weight == neededWeight
         }.sortedBy {
             it.quantumEntanglement
         }
